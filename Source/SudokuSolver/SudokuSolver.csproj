@@ -60,6 +60,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Behaviors\TextBoxBehavior.cs" />
     <Compile Include="Models\Cell.cs" />
     <Compile Include="Models\Sudoku.cs" />
     <Compile Include="ViewModels\BlockViewModel.cs" />

@@ -40,47 +40,47 @@ namespace SudokuSolver.ViewModels
 
         public CellViewModel TopLeft
         {
-            get { return new CellViewModel(_topLeft); }
+            get { return new CellViewModel(_sudoku, _topLeft); }
         }
 
         public CellViewModel TopMiddle
         {
-            get { return new CellViewModel(_topMiddle); }
+            get { return new CellViewModel(_sudoku, _topMiddle); }
         }
 
         public CellViewModel TopRight
         {
-            get { return new CellViewModel(_topRight); }
+            get { return new CellViewModel(_sudoku, _topRight); }
         }
 
         public CellViewModel MiddleLeft
         {
-            get { return new CellViewModel(_middleLeft); }
+            get { return new CellViewModel(_sudoku, _middleLeft); }
         }
 
         public CellViewModel Middle
         {
-            get { return new CellViewModel(_middle); }
+            get { return new CellViewModel(_sudoku, _middle); }
         }
 
         public CellViewModel MiddleRight
         {
-            get { return new CellViewModel(_middleRight); }
+            get { return new CellViewModel(_sudoku, _middleRight); }
         }
         
         public CellViewModel BottomLeft
         {
-            get { return new CellViewModel(_bottomLeft); }
+            get { return new CellViewModel(_sudoku, _bottomLeft); }
         }
 
         public CellViewModel BottomMiddle
         {
-            get { return new CellViewModel(_bottomMiddle); }
+            get { return new CellViewModel(_sudoku, _bottomMiddle); }
         }
 
         public CellViewModel BottomRight
         {
-            get { return new CellViewModel(_bottomRight); }
+            get { return new CellViewModel(_sudoku, _bottomRight); }
         }
     }
 }

@@ -63,5 +63,15 @@ namespace SudokuSolver.ViewModels
         {
             get { return MakeCommand.Do(() => _sudoku.Solve()); }
         }
+
+        public ICommand Step
+        {
+            get { return MakeCommand.Do(() => _sudoku.Step()); }
+        }
+
+        public ICommand Reset
+        {
+            get { return MakeCommand.Do(() => _sudoku.Reset()); }
+        }
     }
 }

@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:b="clr-namespace:SudokuSolver.Behaviors"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
@@ -21,7 +22,7 @@
                 <TextBox TextWrapping="Wrap" Text="{Binding FinalValue}" FontSize="26"
                      VerticalContentAlignment="Center"  VerticalAlignment="Center"
                      HorizontalContentAlignment="Center" HorizontalAlignment="Center"
-                     BorderThickness="0" />
+                     BorderThickness="0" b:TextBoxBehavior.SelectAllTextOnFocus="True" />
                 <TextBlock TextWrapping="Wrap" Text="{Binding PossibleValues}" FontSize="8" Foreground="Red"
                            VerticalAlignment="Top" HorizontalAlignment="Right" />
             </Grid>
@@ -31,7 +32,7 @@
                 <TextBox TextWrapping="Wrap" Text="{Binding FinalValue}" FontSize="26"
                      VerticalContentAlignment="Center"  VerticalAlignment="Center"
                      HorizontalContentAlignment="Center" HorizontalAlignment="Center"
-                     BorderThickness="0" />
+                     BorderThickness="0" b:TextBoxBehavior.SelectAllTextOnFocus="True" />
                 <TextBlock TextWrapping="Wrap" Text="{Binding PossibleValues}" FontSize="8" Foreground="Red"
                            VerticalAlignment="Top" HorizontalAlignment="Right" />
             </Grid>
@@ -41,7 +42,7 @@
                 <TextBox TextWrapping="Wrap" Text="{Binding FinalValue}" FontSize="26"
                      VerticalContentAlignment="Center"  VerticalAlignment="Center"
                      HorizontalContentAlignment="Center" HorizontalAlignment="Center"
-                     BorderThickness="0" />
+                     BorderThickness="0" b:TextBoxBehavior.SelectAllTextOnFocus="True" />
                 <TextBlock TextWrapping="Wrap" Text="{Binding PossibleValues}" FontSize="8" Foreground="Red"
                            VerticalAlignment="Top" HorizontalAlignment="Right" />
             </Grid>
@@ -51,7 +52,7 @@
                 <TextBox TextWrapping="Wrap" Text="{Binding FinalValue}" FontSize="26"
                      VerticalContentAlignment="Center"  VerticalAlignment="Center"
                      HorizontalContentAlignment="Center" HorizontalAlignment="Center"
-                     BorderThickness="0" />
+                     BorderThickness="0" b:TextBoxBehavior.SelectAllTextOnFocus="True" />
                 <TextBlock TextWrapping="Wrap" Text="{Binding PossibleValues}" FontSize="8" Foreground="Red"
                            VerticalAlignment="Top" HorizontalAlignment="Right" />
             </Grid>
@@ -61,7 +62,7 @@
                 <TextBox TextWrapping="Wrap" Text="{Binding FinalValue}" FontSize="26"
                      VerticalContentAlignment="Center"  VerticalAlignment="Center"
                      HorizontalContentAlignment="Center" HorizontalAlignment="Center"
-                     BorderThickness="0" />
+                     BorderThickness="0" b:TextBoxBehavior.SelectAllTextOnFocus="True" />
                 <TextBlock TextWrapping="Wrap" Text="{Binding PossibleValues}" FontSize="8" Foreground="Red"
                            VerticalAlignment="Top" HorizontalAlignment="Right" />
             </Grid>
@@ -71,7 +72,7 @@
                 <TextBox TextWrapping="Wrap" Text="{Binding FinalValue}" FontSize="26"
                      VerticalContentAlignment="Center"  VerticalAlignment="Center"
                      HorizontalContentAlignment="Center" HorizontalAlignment="Center"
-                     BorderThickness="0" />
+                     BorderThickness="0" b:TextBoxBehavior.SelectAllTextOnFocus="True" />
                 <TextBlock TextWrapping="Wrap" Text="{Binding PossibleValues}" FontSize="8" Foreground="Red"
                            VerticalAlignment="Top" HorizontalAlignment="Right" />
             </Grid>
@@ -81,7 +82,7 @@
                 <TextBox TextWrapping="Wrap" Text="{Binding FinalValue}" FontSize="26"
                      VerticalContentAlignment="Center"  VerticalAlignment="Center"
                      HorizontalContentAlignment="Center" HorizontalAlignment="Center"
-                     BorderThickness="0" />
+                     BorderThickness="0" b:TextBoxBehavior.SelectAllTextOnFocus="True" />
                 <TextBlock TextWrapping="Wrap" Text="{Binding PossibleValues}" FontSize="8" Foreground="Red"
                            VerticalAlignment="Top" HorizontalAlignment="Right" />
             </Grid>
@@ -91,7 +92,7 @@
                 <TextBox TextWrapping="Wrap" Text="{Binding FinalValue}" FontSize="26"
                      VerticalContentAlignment="Center"  VerticalAlignment="Center"
                      HorizontalContentAlignment="Center" HorizontalAlignment="Center"
-                     BorderThickness="0" />
+                     BorderThickness="0" b:TextBoxBehavior.SelectAllTextOnFocus="True" />
                 <TextBlock TextWrapping="Wrap" Text="{Binding PossibleValues}" FontSize="8" Foreground="Red"
                            VerticalAlignment="Top" HorizontalAlignment="Right" />
             </Grid>
@@ -101,7 +102,7 @@
                 <TextBox TextWrapping="Wrap" Text="{Binding FinalValue}" FontSize="26"
                      VerticalContentAlignment="Center"  VerticalAlignment="Center"
                      HorizontalContentAlignment="Center" HorizontalAlignment="Center"
-                     BorderThickness="0" />
+                     BorderThickness="0" b:TextBoxBehavior.SelectAllTextOnFocus="True" />
                 <TextBlock TextWrapping="Wrap" Text="{Binding PossibleValues}" FontSize="8" Foreground="Red"
                            VerticalAlignment="Top" HorizontalAlignment="Right" />
             </Grid>

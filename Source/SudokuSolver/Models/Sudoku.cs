@@ -10,53 +10,58 @@ namespace SudokuSolver.Models
 
         public Sudoku()
         {
-            Cells = new List<Cell>();
-            var random = new Random();
-            var randomList = new List<int>();
-
-            for (var row = 0; row < 9; row++)
-            {
-                for (var column = 0; column < 9; column++)
-                {
-                    var cell = new Cell(row, column);
-                    var hash = 0;
-
-                    do
-                    {
-                        hash = random.Next(int.MaxValue);
-                    } while (randomList.Contains(hash));
-
-                    cell.Hash = hash;
-
-                    Cells.Add(cell);
-                }
-            }
-
+            Initialize();
         }
 
         public void Solve()
         {
             while (Cells.Any(cell => cell.FinalValue == 0))
             {
-                for (var row = 0; row < 9; row++)
-                {
-                    var cells = GetCellsByRow(row);
-                    UpdateCells(cells);
-                }
+                Step();
+            }
+        }
 
-                for (var column = 0; column < 9; column++)
-                {
-                    var cells = GetCellsByColumn(column);
-                    UpdateCells(cells);
-                }
+        public void Step()
+        {
+            UpdateRows();
+            UpdateColumns();
+            UpdateBlocks();
+        }
 
-                for (var row = 0; row < 9; row += 3)
+        public void Reset()
+        {
+            foreach (var cell in Cells)
+            {
+                cell.Reset();
+            }
+        }
+
+        private void UpdateRows()
+        {
+            for (var row = 0; row < 9; row++)
+            {
+                var cells = GetCellsByRow(row);
+                UpdateCells(cells);
+            }
+        }
+
+        private void UpdateColumns()
+        {
+            for (var column = 0; column < 9; column++)
+            {
+                var cells = GetCellsByColumn(column);
+                UpdateCells(cells);
+            }
+        }
+
+        private void UpdateBlocks()
+        {
+            for (var row = 0; row < 9; row += 3)
+            {
+                for (var column = 0; column < 9; column += 3)
                 {
-                    for (var column = 0; column < 9; column += 3)
-                    {
-                        var cells = GetCellsByBlock(row, column);
-                        UpdateCells(cells);
-                    }
+                    var cells = GetCellsByBlock(row, column);
+                    UpdateCells(cells);
                 }
             }
         }
@@ -99,5 +104,29 @@ namespace SudokuSolver.Models
             return cellsWithValues.Select(cell => cell.FinalValue);
         }
 
+        private void Initialize()
+        {
+            Cells = new List<Cell>();
+            var random = new Random();
+            var randomList = new List<int>();
+
+            for (var row = 0; row < 9; row++)
+            {
+                for (var column = 0; column < 9; column++)
+                {
+                    var cell = new Cell(row, column);
+                    var hash = 0;
+
+                    do
+                    {
+                        hash = random.Next(int.MaxValue);
+                    } while (randomList.Contains(hash));
+
+                    cell.Hash = hash;
+
+                    Cells.Add(cell);
+                }
+            }
+        }
     }
 }

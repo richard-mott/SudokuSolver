@@ -7,6 +7,7 @@ namespace SudokuSolver.ViewModels
     public class CellViewModel
     {
         private readonly Cell _cell;
+        private readonly Sudoku _sudoku;
 
         public int FinalValue
         {
@@ -17,6 +18,7 @@ namespace SudokuSolver.ViewModels
             set
             {
                 _cell.FinalValue = value;
+                _sudoku.Step();
             }
         }
 
@@ -28,8 +30,9 @@ namespace SudokuSolver.ViewModels
             }
         }
 
-        public CellViewModel(Cell cell)
+        public CellViewModel(Sudoku sudoku, Cell cell)
         {
+            _sudoku = sudoku;
             _cell = cell;
         }
     }

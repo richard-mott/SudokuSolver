@@ -52,6 +52,15 @@ namespace SudokuSolver.Models
             }
         }
 
+        public void Reset()
+        {
+            FinalValue = 0;
+            PossibleValues.Clear();
+
+            for (int i = 1; i < 10; i++)
+                PossibleValues.Add(i);
+        }
+
         public override bool Equals(object obj)
         {
             if (this == obj)
