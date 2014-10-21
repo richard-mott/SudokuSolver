@@ -8,8 +8,9 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <Grid Width="450" Height="450" Margin="10,10,10,5">
+        <Grid Margin="10,10,10,5" Height="720" Width="720">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -48,7 +49,9 @@
                 <v:BlockView DataContext="{Binding BottomRight}" />
             </Border>
         </Grid>
-        <Grid Grid.Row="1">
+        <TextBlock Grid.Row="1" Text="{Binding PuzzleStatus}" FontSize="26" HorizontalAlignment="Center"
+                   Margin="5,10,5,10" />
+        <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -58,6 +61,5 @@
             <Button Content="Step" Grid.Column="1" FontSize="26" Padding="5" Margin="5,5,5,10" Command="{Binding Step}"/>
             <Button Content="Reset" Grid.Column="2" FontSize="26" Padding="5" Margin="5,5,10,10" Command="{Binding Reset}"/>
         </Grid>
-
     </Grid>
 </Window>

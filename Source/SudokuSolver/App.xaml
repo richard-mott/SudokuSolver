@@ -6,6 +6,7 @@
     <Application.Resources>
         <ResourceDictionary>
             <vm:ViewModelLocator x:Key="Locator" />
+            <BooleanToVisibilityConverter x:Key="BoolConverter" />
         </ResourceDictionary>
     </Application.Resources>
 </Application>

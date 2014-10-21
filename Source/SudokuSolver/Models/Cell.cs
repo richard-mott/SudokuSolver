@@ -10,6 +10,7 @@ namespace SudokuSolver.Models
         private readonly ObservableList<int> _possibleValues = new ObservableList<int>();
 
         public int Hash { get; set; }
+        public bool HasChanged { get; private set; }
 
         public int FinalValue
         {
@@ -21,6 +22,12 @@ namespace SudokuSolver.Models
             {
                 _finalValue.Value = value;
                 _possibleValues.Clear();
+
+                if (_finalValue.Value == 0)
+                { 
+                    for (var i = 1; i < 10; i++)
+                        _possibleValues.Add(i);
+                }
             }
         }
 
@@ -41,15 +48,17 @@ namespace SudokuSolver.Models
                 _possibleValues.Add(number);
         }
 
-        public void RemoveValue(int value)
+        public bool RemoveValue(int value)
         {
-            if (PossibleValues.Contains(value))
-                PossibleValues.Remove(value);
+            var changed = false;
 
-            if (PossibleValues.Count == 1)
+            if (PossibleValues.Contains(value))
             {
-                FinalValue = PossibleValues[0];
+                PossibleValues.Remove(value);
+                changed = true;
             }
+            
+            return changed;
         }
 
         public void Reset()
@@ -59,6 +68,21 @@ namespace SudokuSolver.Models
 
             for (int i = 1; i < 10; i++)
                 PossibleValues.Add(i);
+        }
+
+        public Cell Clone()
+        {
+            var copy = new Cell(Row, Column)
+            {
+                FinalValue = FinalValue,
+                Hash = Hash
+            };
+
+            copy.PossibleValues.Clear();
+            foreach (var value in PossibleValues)
+                copy.PossibleValues.Add(value);
+
+            return copy;
         }
 
         public override bool Equals(object obj)

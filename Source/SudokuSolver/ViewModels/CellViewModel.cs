@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using SudokuSolver.Models;
 
 namespace SudokuSolver.ViewModels
@@ -9,16 +8,21 @@ namespace SudokuSolver.ViewModels
         private readonly Cell _cell;
         private readonly Sudoku _sudoku;
 
-        public int FinalValue
+        public string FinalValue
         {
-            get
+            get 
             {
-                return _cell.FinalValue;
+                return _cell.FinalValue == 0 
+                    ? "  " 
+                    : _cell.FinalValue.ToString();
             }
             set
             {
-                _cell.FinalValue = value;
-                _sudoku.Step();
+                int val;
+
+                _cell.FinalValue = int.TryParse(value, out val) 
+                    ? val 
+                    : 0;
             }
         }
 
@@ -26,7 +30,22 @@ namespace SudokuSolver.ViewModels
         {
             get
             {
-                return _cell.PossibleValues.Aggregate("", (current, value) => current + (value + " "));
+                var result = "";
+
+                if (_cell.PossibleValues.Count == 0)
+                    return result;
+
+                for (var i = 0; i < _cell.PossibleValues.Count - 1; i++)
+                {
+                    result += _cell.PossibleValues[i] + ",";
+                    if ((i + 1) % 2 == 0)
+                        result += Environment.NewLine;
+                    else
+                        result += " ";
+                }
+
+                result += _cell.PossibleValues[_cell.PossibleValues.Count - 1];
+                return result;
             }
         }
 

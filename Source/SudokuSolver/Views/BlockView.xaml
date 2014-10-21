@@ -19,92 +19,92 @@
         </Grid.RowDefinitions>
         <Border BorderBrush="Black" BorderThickness="1" DataContext="{Binding TopLeft}">
             <Grid>
-                <TextBox TextWrapping="Wrap" Text="{Binding FinalValue}" FontSize="26"
+                <TextBox TextWrapping="Wrap" Text="{Binding FinalValue}" FontSize="40"
                      VerticalContentAlignment="Center"  VerticalAlignment="Center"
                      HorizontalContentAlignment="Center" HorizontalAlignment="Center"
                      BorderThickness="0" b:TextBoxBehavior.SelectAllTextOnFocus="True" />
-                <TextBlock TextWrapping="Wrap" Text="{Binding PossibleValues}" FontSize="8" Foreground="Red"
-                           VerticalAlignment="Top" HorizontalAlignment="Right" />
+                <TextBlock TextWrapping="Wrap" Text="{Binding PossibleValues}" FontSize="10.667" Foreground="Red"
+                           VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,3,0" />
             </Grid>
         </Border>
         <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1" DataContext="{Binding TopMiddle}">
             <Grid>
-                <TextBox TextWrapping="Wrap" Text="{Binding FinalValue}" FontSize="26"
+                <TextBox TextWrapping="Wrap" Text="{Binding FinalValue}" FontSize="40"
                      VerticalContentAlignment="Center"  VerticalAlignment="Center"
                      HorizontalContentAlignment="Center" HorizontalAlignment="Center"
                      BorderThickness="0" b:TextBoxBehavior.SelectAllTextOnFocus="True" />
-                <TextBlock TextWrapping="Wrap" Text="{Binding PossibleValues}" FontSize="8" Foreground="Red"
-                           VerticalAlignment="Top" HorizontalAlignment="Right" />
+                <TextBlock TextWrapping="Wrap" Text="{Binding PossibleValues}" FontSize="10.667" Foreground="Red"
+                           VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,3,0" />
             </Grid>
         </Border>
         <Border BorderBrush="Black" BorderThickness="1" Grid.Column="2" DataContext="{Binding TopRight}">
             <Grid>
-                <TextBox TextWrapping="Wrap" Text="{Binding FinalValue}" FontSize="26"
+                <TextBox TextWrapping="Wrap" Text="{Binding FinalValue}" FontSize="40"
                      VerticalContentAlignment="Center"  VerticalAlignment="Center"
                      HorizontalContentAlignment="Center" HorizontalAlignment="Center"
                      BorderThickness="0" b:TextBoxBehavior.SelectAllTextOnFocus="True" />
-                <TextBlock TextWrapping="Wrap" Text="{Binding PossibleValues}" FontSize="8" Foreground="Red"
-                           VerticalAlignment="Top" HorizontalAlignment="Right" />
+                <TextBlock TextWrapping="Wrap" Text="{Binding PossibleValues}" FontSize="10.667" Foreground="Red"
+                           VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,3,0" />
             </Grid>
         </Border>
         <Border BorderBrush="Black" BorderThickness="1" Grid.Row="1" DataContext="{Binding MiddleLeft}">
             <Grid>
-                <TextBox TextWrapping="Wrap" Text="{Binding FinalValue}" FontSize="26"
+                <TextBox TextWrapping="Wrap" Text="{Binding FinalValue}" FontSize="40"
                      VerticalContentAlignment="Center"  VerticalAlignment="Center"
                      HorizontalContentAlignment="Center" HorizontalAlignment="Center"
                      BorderThickness="0" b:TextBoxBehavior.SelectAllTextOnFocus="True" />
-                <TextBlock TextWrapping="Wrap" Text="{Binding PossibleValues}" FontSize="8" Foreground="Red"
-                           VerticalAlignment="Top" HorizontalAlignment="Right" />
+                <TextBlock TextWrapping="Wrap" Text="{Binding PossibleValues}" FontSize="10.667" Foreground="Red"
+                           VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,3,0" />
             </Grid>
         </Border>
         <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1" Grid.Row="1"  DataContext="{Binding Middle}">
             <Grid>
-                <TextBox TextWrapping="Wrap" Text="{Binding FinalValue}" FontSize="26"
+                <TextBox TextWrapping="Wrap" Text="{Binding FinalValue}" FontSize="40"
                      VerticalContentAlignment="Center"  VerticalAlignment="Center"
                      HorizontalContentAlignment="Center" HorizontalAlignment="Center"
                      BorderThickness="0" b:TextBoxBehavior.SelectAllTextOnFocus="True" />
-                <TextBlock TextWrapping="Wrap" Text="{Binding PossibleValues}" FontSize="8" Foreground="Red"
-                           VerticalAlignment="Top" HorizontalAlignment="Right" />
+                <TextBlock TextWrapping="Wrap" Text="{Binding PossibleValues}" FontSize="10.667" Foreground="Red"
+                           VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,3,0" />
             </Grid>
         </Border>
-        <Border BorderBrush="Black" BorderThickness="1" RenderTransformOrigin="2.237,0.561" Grid.Column="2" Grid.Row="1" DataContext="{Binding MiddleRight}">
+        <Border BorderBrush="Black" BorderThickness="1" Grid.Column="2" Grid.Row="1" DataContext="{Binding MiddleRight}">
             <Grid>
-                <TextBox TextWrapping="Wrap" Text="{Binding FinalValue}" FontSize="26"
+                <TextBox TextWrapping="Wrap" Text="{Binding FinalValue}" FontSize="40"
                      VerticalContentAlignment="Center"  VerticalAlignment="Center"
                      HorizontalContentAlignment="Center" HorizontalAlignment="Center"
                      BorderThickness="0" b:TextBoxBehavior.SelectAllTextOnFocus="True" />
-                <TextBlock TextWrapping="Wrap" Text="{Binding PossibleValues}" FontSize="8" Foreground="Red"
-                           VerticalAlignment="Top" HorizontalAlignment="Right" />
+                <TextBlock TextWrapping="Wrap" Text="{Binding PossibleValues}" FontSize="10.667" Foreground="Red"
+                           VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,3,0" />
             </Grid>
         </Border>
-        <Border BorderBrush="Black" BorderThickness="1" RenderTransformOrigin="2.237,0.561" Grid.Row="2" DataContext="{Binding BottomLeft}">
+        <Border BorderBrush="Black" BorderThickness="1" Grid.Row="2" DataContext="{Binding BottomLeft}">
             <Grid>
-                <TextBox TextWrapping="Wrap" Text="{Binding FinalValue}" FontSize="26"
+                <TextBox TextWrapping="Wrap" Text="{Binding FinalValue}" FontSize="40"
                      VerticalContentAlignment="Center"  VerticalAlignment="Center"
                      HorizontalContentAlignment="Center" HorizontalAlignment="Center"
                      BorderThickness="0" b:TextBoxBehavior.SelectAllTextOnFocus="True" />
-                <TextBlock TextWrapping="Wrap" Text="{Binding PossibleValues}" FontSize="8" Foreground="Red"
-                           VerticalAlignment="Top" HorizontalAlignment="Right" />
+                <TextBlock TextWrapping="Wrap" Text="{Binding PossibleValues}" FontSize="10.667" Foreground="Red"
+                           VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,3,0" />
             </Grid>
         </Border>
-        <Border BorderBrush="Black" BorderThickness="1" RenderTransformOrigin="2.237,0.561" Grid.Column="1" Grid.Row="2" DataContext="{Binding BottomMiddle}">
+        <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1" Grid.Row="2" DataContext="{Binding BottomMiddle}">
             <Grid>
-                <TextBox TextWrapping="Wrap" Text="{Binding FinalValue}" FontSize="26"
+                <TextBox TextWrapping="Wrap" Text="{Binding FinalValue}" FontSize="40"
                      VerticalContentAlignment="Center"  VerticalAlignment="Center"
                      HorizontalContentAlignment="Center" HorizontalAlignment="Center"
                      BorderThickness="0" b:TextBoxBehavior.SelectAllTextOnFocus="True" />
-                <TextBlock TextWrapping="Wrap" Text="{Binding PossibleValues}" FontSize="8" Foreground="Red"
-                           VerticalAlignment="Top" HorizontalAlignment="Right" />
+                <TextBlock TextWrapping="Wrap" Text="{Binding PossibleValues}" FontSize="10.667" Foreground="Red"
+                           VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,3,0" />
             </Grid>
         </Border>
-        <Border BorderBrush="Black" BorderThickness="1" RenderTransformOrigin="2.237,0.561" Grid.Column="2" Grid.Row="2" DataContext="{Binding BottomRight}">
+        <Border BorderBrush="Black" BorderThickness="1" Grid.Column="2" Grid.Row="2" DataContext="{Binding BottomRight}">
             <Grid>
-                <TextBox TextWrapping="Wrap" Text="{Binding FinalValue}" FontSize="26"
+                <TextBox TextWrapping="Wrap" Text="{Binding FinalValue}" FontSize="40"
                      VerticalContentAlignment="Center"  VerticalAlignment="Center"
                      HorizontalContentAlignment="Center" HorizontalAlignment="Center"
                      BorderThickness="0" b:TextBoxBehavior.SelectAllTextOnFocus="True" />
-                <TextBlock TextWrapping="Wrap" Text="{Binding PossibleValues}" FontSize="8" Foreground="Red"
-                           VerticalAlignment="Top" HorizontalAlignment="Right" />
+                <TextBlock TextWrapping="Wrap" Text="{Binding PossibleValues}" FontSize="10.667" Foreground="Red"
+                           VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,3,0" />
             </Grid>
         </Border>
     </Grid>

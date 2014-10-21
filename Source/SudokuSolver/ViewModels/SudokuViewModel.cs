@@ -11,7 +11,19 @@ namespace SudokuSolver.ViewModels
         public SudokuViewModel(Sudoku sudoku)
         {
             _sudoku = sudoku;
+        }
 
+        public string PuzzleStatus
+        {
+            get
+            {
+                if (_sudoku.IsUnsolvable)
+                    return "Puzzle is unsolvable from this state.";
+
+                return _sudoku.IsSolved 
+                    ? "Puzzle solved." 
+                    : "Puzzle in progress.";
+            }
         }
 
         public BlockViewModel TopLeft
